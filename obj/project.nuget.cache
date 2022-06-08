@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "aA7dIXxRzlgCA5WYKydZrkCChTzLy0N3m4Fs9P90ewYVW8+x/2uWHkDinmKYXNiQGUTOUQ7nk5F0FZJ1lUrHdA==",
+  "success": true,
+  "projectFilePath": "D:\\Develop\\Projects\\Snap.Genshin\\DGP.Genshin.EnkaAPI\\DGP.Genshin.EnkaAPI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\16861\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
