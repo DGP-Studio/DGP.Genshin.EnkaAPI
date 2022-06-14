@@ -1,68 +1,114 @@
 ﻿namespace DGP.Genshin.EnkaAPI;
 
-public class FightProperty
+/// <summary>
+/// https://github.com/Grasscutters/Grasscutter/tree/development/src/main/java/emu/grasscutter/game/props/FightProperty.java
+/// </summary>
+public enum FightProperty
 {
-    public const string BaseHp = "1";                   // 生命值白字
-    public const string HpAdd = "2";                    // 生命值绿字加成
-    public const string HpAddPercent = "3";             // 生命值绿字加成百分比
+    FIGHT_PROP_NONE = 0,
+    FIGHT_PROP_BASE_HP = 1,
+    FIGHT_PROP_HP = 2,
+    FIGHT_PROP_HP_PERCENT = 3,
+    FIGHT_PROP_BASE_ATTACK = 4,
+    FIGHT_PROP_ATTACK = 5,
+    FIGHT_PROP_ATTACK_PERCENT = 6,
+    FIGHT_PROP_BASE_DEFENSE = 7,
+    FIGHT_PROP_DEFENSE = 8,
+    FIGHT_PROP_DEFENSE_PERCENT = 9,
+    FIGHT_PROP_BASE_SPEED = 10,//
+    FIGHT_PROP_SPEED_PERCENT = 11,//
+    FIGHT_PROP_HP_MP_PERCENT = 12,//
+    FIGHT_PROP_ATTACK_MP_PERCENT = 13,//
 
-    public const string BaseAtk = "4";                  // 攻击力白字
-    public const string AtkAdd = "5";                   // 攻击力绿字加成
-    public const string AtkAddPercent = "6";            // 攻击力绿字加成百分比
+    FIGHT_PROP_CRITICAL = 20,
+    FIGHT_PROP_ANTI_CRITICAL = 21,
+    FIGHT_PROP_CRITICAL_HURT = 22,
+    FIGHT_PROP_CHARGE_EFFICIENCY = 23,
+    FIGHT_PROP_ADD_HURT = 24,//
+    FIGHT_PROP_SUB_HURT = 25,//
+    FIGHT_PROP_HEAL_ADD = 26,
+    FIGHT_PROP_HEALED_ADD = 27,
+    FIGHT_PROP_ELEMENT_MASTERY = 28,
+    FIGHT_PROP_PHYSICAL_SUB_HURT = 29,
+    FIGHT_PROP_PHYSICAL_ADD_HURT = 30,
+    FIGHT_PROP_DEFENCE_IGNORE_RATIO = 31,
+    FIGHT_PROP_DEFENCE_IGNORE_DELTA = 32,
 
-    public const string BaseDef = "7";                  // 防御力
-    public const string DefAdd = "8";                   // 防御力绿字加成
-    public const string DefAddPercent = "9";            // 防御力绿字加成百分比
+    FIGHT_PROP_FIRE_ADD_HURT = 40,
+    FIGHT_PROP_ELEC_ADD_HURT = 41,
+    FIGHT_PROP_WATER_ADD_HURT = 42,
+    FIGHT_PROP_GRASS_ADD_HURT = 43,
+    FIGHT_PROP_WIND_ADD_HURT = 44,
+    FIGHT_PROP_ROCK_ADD_HURT = 45,
+    FIGHT_PROP_ICE_ADD_HURT = 46,
+    FIGHT_PROP_HIT_HEAD_ADD_HURT = 47,
 
-    public const string CritRate = "20";                // 暴击率
-    public const string Prop21 = "21";                  // ? 0
-    public const string CritDmg = "22";                 // 暴击伤害
+    FIGHT_PROP_FIRE_SUB_HURT = 50,
+    FIGHT_PROP_ELEC_SUB_HURT = 51,
+    FIGHT_PROP_WATER_SUB_HURT = 52,
+    FIGHT_PROP_GRASS_SUB_HURT = 53,
+    FIGHT_PROP_WIND_SUB_HURT = 54,
+    FIGHT_PROP_ROCK_SUB_HURT = 55,
+    FIGHT_PROP_ICE_SUB_HURT = 56,
 
-    public const string EnergyRecharge = "23";          // 元素充能效率
-    public const string HealingBonus = "26";            // 治疗加成
-    public const string IncomingHealingBonus = "27";    // 受治疗加成? 0
-    public const string ElementMastery = "28";          // 元素精通
-    public const string PhysicalRes = "29";             // ?
+    FIGHT_PROP_EFFECT_HIT = 60,
+    FIGHT_PROP_EFFECT_RESIST = 61,
+    FIGHT_PROP_FREEZE_RESIST = 62,
+    FIGHT_PROP_TORPOR_RESIST = 63,
+    FIGHT_PROP_DIZZY_RESIST = 64,
+    FIGHT_PROP_FREEZE_SHORTEN = 65,
+    FIGHT_PROP_TORPOR_SHORTEN = 66,
+    FIGHT_PROP_DIZZY_SHORTEN = 67,
 
-    public const string PhysicalDmgBonus = "30";        // 物理伤害加成
+    FIGHT_PROP_MAX_FIRE_ENERGY = 70,
+    FIGHT_PROP_MAX_ELEC_ENERGY = 71,
+    FIGHT_PROP_MAX_WATER_ENERGY = 72,
+    FIGHT_PROP_MAX_GRASS_ENERGY = 73,
+    FIGHT_PROP_MAX_WIND_ENERGY = 74,
+    FIGHT_PROP_MAX_ICE_ENERGY = 75,
+    FIGHT_PROP_MAX_ROCK_ENERGY = 76,
 
-    public const string PyroDmgBonus = "40";            // 火元素伤害加成
-    public const string ElectroDmgBonus = "41";         // 雷元素伤害加成
-    public const string HydroDmgBonus = "42";           // 水元素伤害加成
-    public const string DendroDmgBonus = "43";          // 草元素伤害加成
-    public const string AnemoDmgBonus = "44";           // 风元素伤害加成
-    public const string GeoDmgBonus = "45";             // 岩元素伤害加成
-    public const string CryoDmgBonus = "46";            // 冰元素伤害加成
+    FIGHT_PROP_SKILL_CD_MINUS_RATIO = 80,
+    FIGHT_PROP_SHIELD_COST_MINUS_RATIO = 81,
 
-    public const string PyroDmgRes = "50";              // 火元素抗性提升
-    public const string ElectroDmgRes = "51";           // 雷元素抗性提升
-    public const string HydroDmgRes = "52";             // 水元素抗性提升
-    public const string DendroDmgRes = "53";            // 草元素抗性提升
-    public const string AnemoDmgRes = "54";             // 风元素抗性提升
-    public const string GeoDmgRes = "55";               // 岩元素抗性提升
-    public const string CryoDmgRes = "56";              // 冰元素抗性提升
+    FIGHT_PROP_CUR_FIRE_ENERGY = 1000,
+    FIGHT_PROP_CUR_ELEC_ENERGY = 1001,
+    FIGHT_PROP_CUR_WATER_ENERGY = 1002,
+    FIGHT_PROP_CUR_GRASS_ENERGY = 1003,
+    FIGHT_PROP_CUR_WIND_ENERGY = 1004,
+    FIGHT_PROP_CUR_ICE_ENERGY = 1005,
+    FIGHT_PROP_CUR_ROCK_ENERGY = 1006,
 
-    public const string PyroEnergyCost = "70";          // 火元素能量消耗
-    public const string ElectroEnergyCost = "71";       // 雷元素能量消耗
-    public const string HydroEnergyCost = "72";         // 水元素能量消耗
-    public const string DendroEnergyCost = "73";        // 草元素能量消耗
-    public const string AnemoEnergyCost = "74";         // 风元素能量消耗
-    public const string CryoEnergyCost = "75";          // 岩元素能量消耗
-    public const string GeoEnergyCost = "76";           // 冰元素能量消耗
+    FIGHT_PROP_CUR_HP = 1010,
 
-    public const string ShieldStrength = "81";          // 护盾强效
+    FIGHT_PROP_MAX_HP = 2000,
+    FIGHT_PROP_CUR_ATTACK = 2001,
+    FIGHT_PROP_CUR_DEFENSE = 2002,
+    FIGHT_PROP_CUR_SPEED = 2003,
 
-    public const string Prop1000 = "1000";              // ?
-    public const string Prop1002 = "1002";              // ?
-    public const string Prop1004 = "1004";              // ?
-    public const string Prop1005 = "1005";              // ?
-    public const string Prop1006 = "1006";              // ?
-    public const string HpCurrent = "1010";             // 当前生命值
-
-    public const string MaxHp = "2000";                 // 总生命值
-    public const string Atk = "2001";                   // 总攻击力
-    public const string Def = "2002";                   // 总防御力
-    public const string Prop2003 = "2003";              // ?
-
-    public const string Prop3008 = "3008";              // ?
+    FIGHT_PROP_NONEXTRA_ATTACK = 3000,
+    FIGHT_PROP_NONEXTRA_DEFENSE = 3001,
+    FIGHT_PROP_NONEXTRA_CRITICAL = 3002,
+    FIGHT_PROP_NONEXTRA_ANTI_CRITICAL = 3003,
+    FIGHT_PROP_NONEXTRA_CRITICAL_HURT = 3004,
+    FIGHT_PROP_NONEXTRA_CHARGE_EFFICIENCY = 3005,
+    FIGHT_PROP_NONEXTRA_ELEMENT_MASTERY = 3006,
+    FIGHT_PROP_NONEXTRA_PHYSICAL_SUB_HURT = 3007,
+    FIGHT_PROP_NONEXTRA_FIRE_ADD_HURT = 3008,
+    FIGHT_PROP_NONEXTRA_ELEC_ADD_HURT = 3009,
+    FIGHT_PROP_NONEXTRA_WATER_ADD_HURT = 3010,
+    FIGHT_PROP_NONEXTRA_GRASS_ADD_HURT = 3011,
+    FIGHT_PROP_NONEXTRA_WIND_ADD_HURT = 3012,
+    FIGHT_PROP_NONEXTRA_ROCK_ADD_HURT = 3013,
+    FIGHT_PROP_NONEXTRA_ICE_ADD_HURT = 3014,
+    FIGHT_PROP_NONEXTRA_FIRE_SUB_HURT = 3015,
+    FIGHT_PROP_NONEXTRA_ELEC_SUB_HURT = 3016,
+    FIGHT_PROP_NONEXTRA_WATER_SUB_HURT = 3017,
+    FIGHT_PROP_NONEXTRA_GRASS_SUB_HURT = 3018,
+    FIGHT_PROP_NONEXTRA_WIND_SUB_HURT = 3019,
+    FIGHT_PROP_NONEXTRA_ROCK_SUB_HURT = 3020,
+    FIGHT_PROP_NONEXTRA_ICE_SUB_HURT = 3021,
+    FIGHT_PROP_NONEXTRA_SKILL_CD_MINUS_RATIO = 3022,
+    FIGHT_PROP_NONEXTRA_SHIELD_COST_MINUS_RATIO = 3023,
+    FIGHT_PROP_NONEXTRA_PHYSICAL_ADD_HURT = 3024,
 }
