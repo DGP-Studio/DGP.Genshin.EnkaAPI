@@ -35,6 +35,7 @@ public class AvatarInfo
 
     /// <summary>
     /// List of Unlocked Skill Ids
+    /// 被动天赋
     /// </summary>
     [JsonProperty("inherentProudSkillList")]
     public IList<int> InherentProudSkillList { get; set; } = default!;
@@ -67,11 +68,14 @@ public class AvatarInfo
     public IList<int> TalentIdList { get; set; } = default!;
 
     /// <summary>
-    /// 皮肤Id
+    /// 皮肤 Id
     /// </summary>
     [JsonProperty("costumeId")]
     public int? CostumeId { get; set; }
 
+    /// <summary>
+    /// 命座额外技能等级
+    /// </summary>
     [JsonProperty("proudSkillExtraLevelMap")]
     public ProudSkillExtraLevelMap ProudSkillExtraLevelMap { get; set; } = default!;
 }
