@@ -24,6 +24,30 @@
           "bin/placeholder/Snap.Data.Json.dll": {}
         }
       }
+    },
+    "net6.0/win-x64": {
+      "Newtonsoft.Json/13.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "Snap.Data.Json/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "compile": {
+          "bin/placeholder/Snap.Data.Json.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Snap.Data.Json.dll": {}
+        }
+      }
     }
   },
   "libraries": {
@@ -128,6 +152,11 @@
           }
         },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+      }
+    },
+    "runtimes": {
+      "win-x64": {
+        "#import": []
       }
     }
   }
